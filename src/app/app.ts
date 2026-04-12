@@ -7,15 +7,14 @@ import { MatMenuModule } from '@angular/material/menu';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
+  imports: [RouterOutlet,
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
     RouterModule
   ],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
 export class AppComponent {
   title = 'invoice-ui';
