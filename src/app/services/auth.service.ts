@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 export class AuthService {
     private TOKEN_KEY = 'token';
     private EXP_KEY = 'token_exp';
-    private tokenUrl = "http://localhost:5269/api/v1/Login/login";
+    private tokenUrl = "http://localhost:5120/api/Login/Login";
 
     constructor(private http: HttpClient) { }
     login(credentials: LoginRequest): Observable<LoginResponse> {

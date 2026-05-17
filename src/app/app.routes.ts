@@ -6,7 +6,7 @@ export const routes: Routes = [
 
     { path: 'home', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
 
-    // Masters
+
     {
         path: 'masters',
         canActivate: [authGuard],
@@ -20,7 +20,6 @@ export const routes: Routes = [
         ]
     },
 
-    // Transactions
     {
         path: 'transactions',
         canActivate: [authGuard],
