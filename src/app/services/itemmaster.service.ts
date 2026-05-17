@@ -7,7 +7,7 @@ import { PagedResult } from "../models/paged-result";
 @Injectable({ providedIn: 'root' })
 
 export class ItemmasterService {
-    private apiUrl = "http://localhost:5269/api/v1/ItemMaster";
+    private apiUrl = "http://localhost:5120/api/ItemMaster";
     items = signal<Itemmaster[]>([]);
     constructor(private http: HttpClient) { }
     getPagedItems
