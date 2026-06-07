@@ -111,7 +111,7 @@ export class CatListComponent implements OnInit {
                     this.pageSize,
                 ),
             );
-
+            console.log("Get Paged Category", res);
             this.Cat.set(res?.data ?? []);
             this.totalRecords = res.totalRecords;
             this.dataSource = new MatTableDataSource(res?.data ?? []);
