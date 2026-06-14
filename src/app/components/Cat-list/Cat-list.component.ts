@@ -138,14 +138,14 @@ export class CatListComponent implements OnInit {
         try {
             await firstValueFrom(this.service.delete(id));
 
-            this.snackBar.open('Item deleted successfully', 'Close', {
+            this.snackBar.open('Categry deleted successfully', 'Close', {
                 duration: 3000,
             });
 
             await this.loadcategory();
             this.clearFilters();
         } catch {
-            this.snackBar.open('Item delete error', 'Close', { duration: 3000 });
+            this.snackBar.open('Category delete error', 'Close', { duration: 3000 });
         }
     }
 
@@ -160,7 +160,7 @@ export class CatListComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe((result) => {
             if (result) {
-                this.snackBar.open('Item created successfully', 'Close', {
+                this.snackBar.open('Category created successfully', 'Close', {
                     duration: 3000
                 });
                 this.loadcategory();
@@ -168,18 +168,18 @@ export class CatListComponent implements OnInit {
         });
     }
 
-    openEditDialog(item: any) {
+    openEditDialog(Category: any) {
         const dialogRef = this.dialog.open(CatFormComponent, {
             width: '900px',
             maxHeight: '90vh',
             panelClass: 'custom-dialog',
             autoFocus: false,
-            data: item,
+            data: Category,
         });
 
         dialogRef.afterClosed().subscribe((result) => {
             if (result === true) {
-                this.snackBar.open('Item updated successfully', 'Close', {
+                this.snackBar.open('Category updated successfully', 'Close', {
                     duration: 3000
                 });
                 this.loadcategory();
